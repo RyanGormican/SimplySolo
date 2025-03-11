@@ -1,16 +1,28 @@
-// components/PlayGrid.js
+"use client";
+import { useEffect, useState } from 'react';
 import { Grid, Card, CardContent, Typography, CardMedia } from '@mui/material';
+import { useRouter } from 'next/navigation';
 import { playData } from './PlayData';
 
 export default function PlayGrid() {
+  const [isClient, setIsClient] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    setIsClient(true);  
+  }, []);
+
+  if (!isClient) return null;  
+
+  const handleCardClick = (title) => {
+    router.push(`/${title}`);
+  };
+
   return (
     <Grid container spacing={4} justifyContent="center">
       {playData.map((card) => (
         <Grid item xs={12} sm={6} md={3} key={card.id}>
-          <Card>
-            <CardMedia
-    
-            />
+          <Card onClick={() => handleCardClick(card.title)} style={{ cursor: 'pointer' }}>
             <CardContent>
               <Typography variant="h6" component="div">
                 {card.title}

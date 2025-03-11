@@ -22,4 +22,11 @@
 }
 .title{
 	text-align:center;
+	font-size:3rem;
+}
+h1{
+	  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
