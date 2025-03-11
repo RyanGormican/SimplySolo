@@ -23,6 +23,13 @@
 .title{
 	text-align:center;
 	font-size:3rem;
+
+}
+*{
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 h1{
 	  font-family: "Chivo", sans-serif;

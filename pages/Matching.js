@@ -69,16 +69,6 @@ const Matching = () => {
 
   return (
     <div>
-      <h1 className="title">
-        Matching
-        <Icon 
-          icon="mingcute:back-fill" 
-          width="40" 
-          color="black"
-          style={{ cursor: 'pointer' }}
-          onClick={() => router.push('/home')}
-        />
-      </h1>
       <Grid container spacing={2} justifyContent="center" alignItems="center">
         {icons.map((iconData, index) => (
           <Grid item xs={3} key={index}>
