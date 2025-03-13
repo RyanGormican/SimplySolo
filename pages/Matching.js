@@ -94,7 +94,7 @@ const Matching = () => {
             <Card
               onClick={() => handleCardClick(index)}
               style={{
-                minHeight: '8vh',
+                maxHeight: '8vh',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',

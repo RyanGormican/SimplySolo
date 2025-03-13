@@ -20,5 +20,19 @@ export const playData = [
     color: '#3285a8',
     tags: ["Focus", "Memory", "Perception", "Attention to Detail", "Brain Training", "Challenge"],
   },
- 
+ {
+    id: 4,
+    title: "React",
+    description: "Test how quickly you can react to a changing signal.",
+    color: '#ff6b6b',
+    tags: ["Speed", "Reflex", "Focus", "Simple", "Challenge"],
+},
+{
+    id: 5,
+    title: "Sequence",
+    description: "Remember and repeat the flashing pattern.",
+    color: '#a569bd',
+    tags: ["Memory", "Pattern Recognition", "Focus", "Brain Training", "Challenge"],
+},
+
 ];
