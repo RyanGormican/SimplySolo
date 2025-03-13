@@ -3,14 +3,13 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-
+import Navigate from '../components/Navigate';
 export default function App({ Component, pageProps }) {
   const router = useRouter();
 
  
 
   const handleTitleClick = () => {
-
     router.push('/Home');
   };
 
@@ -24,11 +23,10 @@ export default function App({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
       </Head>
       
-      {/* Title with an onClick handler for routing */}
       <h1 className="title" onClick={handleTitleClick} style={{ cursor: 'pointer' }}>
         SimplySolo
       </h1>
-
+            <Navigate />
       <Component {...pageProps} />
     </>
   );

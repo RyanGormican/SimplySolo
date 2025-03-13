@@ -1,7 +1,6 @@
 "use client"; 
 
 import { useEffect, useState } from 'react';
-import Navigate from '../components/Navigate';
 import PlayGrid from '../components/PlayGrid';
 import '../styles/globals.css';
 
@@ -16,7 +15,6 @@ export default function Home() {
 
   return (
     <div>
-      <Navigate />
       <PlayGrid />
     </div>
   );

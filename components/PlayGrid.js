@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from 'react';
-import { Grid, Card, CardContent, Typography, CardMedia } from '@mui/material';
+import { Grid, Card, CardContent, Typography, Chip } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import { playData } from './PlayData';
 
@@ -19,9 +19,9 @@ export default function PlayGrid() {
   };
 
   return (
-    <Grid container spacing={4} justifyContent="center">
+    <Grid container spacing={6} justifyContent="center">
       {playData.map((card) => (
-        <Grid item xs={12} sm={6} md={3} key={card.id}>
+        <Grid item xs={12} sm={6} md={2.5} key={card.id}>
           <Card
             onClick={() => handleCardClick(card.title)}
             style={{
@@ -29,20 +29,32 @@ export default function PlayGrid() {
               height: '30vh',
               display: 'flex',
               flexDirection: 'column',
-              backgroundColor: card.color || '#fff', 
+              backgroundColor: card.color || '#fff',
+              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.05)';
+              e.currentTarget.style.boxShadow = '0px 4px 15px rgba(0, 0, 0, 0.2)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = 'none';
             }}
           >
-            <CardContent
-              height="70%"
-            >
+            <CardContent style={{ flex: 1 }}>
               <Typography variant="h6" component="div">
                 {card.title}
               </Typography>
             </CardContent>
-            <CardContent style={{ marginTop: 'auto' }}>
+            <CardContent style={{ flex: 2 }}>
               <Typography variant="body2" color="text.secondary">
                 {card.description}
               </Typography>
+            </CardContent>
+            <CardContent style={{ flex: 1, display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
+              {card.tags.map((tag, index) => (
+                <Chip key={index} label={tag} size="small" color="primary" />
+              ))}
             </CardContent>
           </Card>
         </Grid>
