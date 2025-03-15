@@ -19,7 +19,7 @@ export default function PlayGrid() {
   };
 
   return (
-    <Grid container spacing={6} justifyContent="center">
+    <Grid container spacing={1.5} justifyContent="center">
       {playData.map((card) => (
         <Grid item xs={12} sm={6} md={2.5} key={card.id}>
           <Card

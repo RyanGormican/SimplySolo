@@ -34,5 +34,12 @@ export const playData = [
     color: '#a569bd',
     tags: ["Memory", "Pattern Recognition", "Focus", "Brain Training", "Challenge"],
 },
+{
+    id: 6,
+    title: "Whiskers",
+    description: "Click the cat while avoiding the bombs in classic whack-a-mole fashion.",
+    color: '#ffb938',
+    tags:  ["Reaction", "Speed", "Focus", "Simple", "Challenge", "Fun"],
+},
 
 ];
