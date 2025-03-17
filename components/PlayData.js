@@ -37,9 +37,15 @@ export const playData = [
 {
     id: 6,
     title: "Whiskers",
-    description: "Click the cat while avoiding the bombs in classic whack-a-mole fashion.",
+    description: "Click the cat while avoiding the bombs in the time limit.",
     color: '#ffb938',
     tags:  ["Reaction", "Speed", "Focus", "Simple", "Challenge", "Fun"],
 },
-
+{
+    id: 7,
+    title: "Deception",
+    description: "Test your attention to detail by distinguishing text color from a text containing a color.",
+    color: '#e14d7d',
+    tags: ["Attention", "Focus", "Speed", "Challenge"],
+}
 ];

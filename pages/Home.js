@@ -10,12 +10,18 @@ export default function Home() {
   useEffect(() => {
     setIsClient(true);
   }, []);
- 
-  if (!isClient) return null; 
+
+  if (!isClient) return null;
 
   return (
-    <div>
-      <PlayGrid />
+    <div className="container">
+      <div className="menu">
+
+        <h3></h3>
+      </div>
+      <div className="play-grid">
+        <PlayGrid />
+      </div>
     </div>
   );
 }

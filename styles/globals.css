@@ -37,3 +37,20 @@ h1{
   font-weight: 700;
   font-style: normal;
 }
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.menu {
+  width: 20%;
+  background-color: #f4f4f4;
+  min-height:85vh;
+
+}
+
+.play-grid {
+  width: 80%;
+  background-color: #fff; 
+}
